@@ -1,0 +1,51 @@
+﻿<Page x:Class="PolivanovZachet.PageF.DataOcPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PolivanovZachet.PageF"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DataOcPage">
+
+    <Grid>
+        <StackPanel>
+           <Button 
+               Width="120"
+               Style="{StaticResource btnStyle}"
+               HorizontalAlignment="Right"
+                    Name="btnSort"
+                    Click="btnSort_Click"
+                    Content="Назад"/>
+
+            <DataGrid
+                Margin="5"
+            Name="dataOc"
+            AutoGenerateColumns="False"
+            IsReadOnly="True"
+            FontSize="20"
+            FontFamily="Calibri"
+            FontWeight="Bold"
+            Foreground="#013220">
+                <DataGrid.RowHeaderStyle>
+                    <Style TargetType="DataGridRowHeader">
+                        <Setter Property="Background" Value="#013220"/>
+                        <Setter Property="Foreground" Value="#FF059905"/>
+                    </Style>
+                </DataGrid.RowHeaderStyle>
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="Background" Value="#013220"/>
+                        <Setter Property="Foreground" Value="#FF059905"/>
+                        <Setter Property="FontSize" Value="18"/>
+                        <Setter Property="FontWeight" Value="Light"/>
+                    </Style>
+                </DataGrid.RowStyle>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Дисциплина" Binding="{Binding Desciplina.Name}" Width="*"/>
+                    <DataGridTextColumn Header="Оценка" Binding="{Binding Ocen}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Page>
