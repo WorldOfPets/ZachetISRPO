@@ -191,9 +191,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Res\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="DataBaesF\DBZachet.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -205,7 +203,7 @@
       <DependentUpon>DBZachet.edmx</DependentUpon>
       <LastGenOutput>DBZachet.cs</LastGenOutput>
     </Content>
-    <Resource Include="PageF\haker.jpg" />
+    <Resource Include="Resource\haker.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

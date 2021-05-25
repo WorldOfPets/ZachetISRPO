@@ -11,12 +11,12 @@
     <Grid>
         <Image 
             Name="Img"
-            Visibility="Collapsed"
+            Visibility="Visible"
             Grid.RowSpan="2"
                Height="500"
                Width="750"
                Margin="0 -35 0 0"
-            Source="./haker.jpg"/>
+            Source="/Resource/haker.jpg"/>
         <Border
             BorderBrush="#FF059905"
             BorderThickness="5"
