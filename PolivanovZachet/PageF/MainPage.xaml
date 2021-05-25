@@ -22,14 +22,14 @@
                 Style="{StaticResource btnStyle}"
                 Name="btnAddSt"
                 Click="btnAddSt_Click"
-                Content="Добавить студента"/>
+                Content="Добавить студента"/><!--Кнопка перехода на страницу добавления студента-->
             <Button 
                 Width="200"
                 Height="35"
                 Style="{StaticResource btnStyle}"
                 Name="btnAddOcenka"
                 Click="btnAddOcenka_Click"
-                Content="Добавить оценку"/>
+                Content="Добавить оценку"/><!--Кнопка перехода на страницу добавления оценки-->
             <Button 
                 Margin="5 5 5 10"
                 Width="200"
@@ -37,7 +37,7 @@
                 Style="{StaticResource btnStyle}"
                 Name="btnSee"
                 Click="btnSee_Click"
-                Content="Показать студентов"/>
+                Content="Показать студентов"/><!--Кнопка перехода на страницу отображения студентов-->
         </StackPanel>
         </Border>
     </Grid>

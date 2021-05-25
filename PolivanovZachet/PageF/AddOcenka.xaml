@@ -16,7 +16,7 @@
             Content="Назад"
             Name="btnBack"
             Click="btnBack_Click"
-            Width="120"/>
+            Width="120"/><!--Кнопка назад-->
         <Border
             Style="{StaticResource stBorder}">
             
@@ -30,7 +30,7 @@
                 HorizontalAlignment="Right">
                 <TextBlock 
                     Style="{StaticResource tblStyle}"
-                    Text="Групп: "/>
+                    Text="Группа: "/>
                 <ComboBox 
                     Margin="5"
                     FontFamily="Calibri"
@@ -38,7 +38,7 @@
                     DropDownClosed="cmbGroup_DropDownClosed"
                     Name="cmbGroup"
                     Width="150"/>
-            </StackPanel>
+            </StackPanel><!--Группа-->
             <StackPanel
                 Orientation="Horizontal"
                 HorizontalAlignment="Right">
@@ -51,7 +51,7 @@
                     FontSize="14"
                     Name="cmbStudent"
                     Width="150"/>
-            </StackPanel>
+            </StackPanel><!--Cтудент-->
             <StackPanel
                 Orientation="Horizontal"
                 HorizontalAlignment="Right">
@@ -64,7 +64,7 @@
                     FontSize="14"
                     Name="cmbDescip"
                     Width="150"/>
-            </StackPanel>
+            </StackPanel><!--Дисциплина-->
             <StackPanel
                 Orientation="Horizontal"
                 HorizontalAlignment="Right">
@@ -75,14 +75,14 @@
                     Style="{StaticResource tbxlStyle}"
                     Name="tbOcenka"
                     Width="150"/>
-            </StackPanel>
+            </StackPanel><!--Оценка-->
             <Button 
                 Height="35"
                 Width="150"
                 Style="{StaticResource btnStyle}"
                 Name="btnAddO"
                 Click="btnAddO_Click"
-                Content="Добавить оценку"/>
+                Content="Добавить оценку"/><!--Кнопка добавить оценку-->
         </StackPanel>
         </Border>
     </Grid>

@@ -10,23 +10,22 @@
 
     <Grid>
         <StackPanel>
-           <Button 
+            <Button 
                Width="120"
                Style="{StaticResource btnStyle}"
                HorizontalAlignment="Right"
                     Name="btnSort"
                     Click="btnSort_Click"
-                    Content="Назад"/>
-
+                    Content="Назад"/><!--Кнопка назад-->
             <DataGrid
                 Margin="5"
-            Name="dataOc"
-            AutoGenerateColumns="False"
-            IsReadOnly="True"
-            FontSize="20"
-            FontFamily="Calibri"
-            FontWeight="Bold"
-            Foreground="#013220">
+                Name="dataOc"
+                AutoGenerateColumns="False"
+                IsReadOnly="True"
+                FontSize="20"
+                FontFamily="Calibri"
+                FontWeight="Bold"
+                Foreground="#013220">
                 <DataGrid.RowHeaderStyle>
                     <Style TargetType="DataGridRowHeader">
                         <Setter Property="Background" Value="#013220"/>
@@ -40,12 +39,12 @@
                         <Setter Property="FontSize" Value="18"/>
                         <Setter Property="FontWeight" Value="Light"/>
                     </Style>
-                </DataGrid.RowStyle>
+                </DataGrid.RowStyle><!--Стиль строк-->
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Дисциплина" Binding="{Binding Desciplina.Name}" Width="*"/>
                     <DataGridTextColumn Header="Оценка" Binding="{Binding Ocen}" Width="*"/>
-                </DataGrid.Columns>
-            </DataGrid>
+                </DataGrid.Columns><!--Колонки-->
+            </DataGrid><!--Разметка дата грида-->
         </StackPanel>
     </Grid>
 </Page>

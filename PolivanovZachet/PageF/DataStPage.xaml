@@ -16,55 +16,55 @@
             Content="Назад"
             Click="btnBack_Click"
             Name="btnBack"
-            Width="120"/>
+            Width="120"/><!--Кнопка назад-->
         <StackPanel>
             <StackPanel Orientation="Horizontal">
 
                 <StackPanel
-                Orientation="Horizontal">
+                    Orientation="Horizontal">
                     <ComboBox 
                     Margin="5"
                     FontFamily="Calibri"
                     FontSize="14"
                     Name="cmbSort"
-                    Width="100"/>
+                    Width="100"/><!--Комбобокс для сортироваки-->
                     <Button 
                     Width="120"
                     Style="{StaticResource btnStyle}"
                     Name="btnSort"
                     Click="btnSort_Click"
-                    Content="Сортировать"/>
+                    Content="Сортировать"/><!--Кнопка для сортировки-->
                 </StackPanel>
             </StackPanel>
-        <DataGrid
-            Margin="5"
-            Name="dataSt"
-            AutoGenerateColumns="False"
-            IsReadOnly="True"
-            FontSize="20"
-            FontFamily="Calibri"
-            FontWeight="Bold"
-            Foreground="#013220">
+            <DataGrid
+                Margin="5"
+                Name="dataSt"
+                AutoGenerateColumns="False"
+                IsReadOnly="True"
+                FontSize="20"
+                FontFamily="Calibri"
+                FontWeight="Bold"
+                Foreground="#013220">
                 <DataGrid.RowHeaderStyle>
                     <Style TargetType="DataGridRowHeader">
                         <Setter Property="Background" Value="#013220"/>
                         <Setter Property="Foreground" Value="#FF059905"/>
                     </Style>
                 </DataGrid.RowHeaderStyle>
-            <DataGrid.RowStyle>
-                <Style TargetType="DataGridRow">
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
                         <Setter Property="Background" Value="#013220"/>
                         <Setter Property="Foreground" Value="#FF059905"/>
                         <Setter Property="FontSize" Value="18"/>
                         <Setter Property="FontWeight" Value="Light"/>
                         <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick"/>
-                </Style>
-            </DataGrid.RowStyle>
-            <DataGrid.Columns>
+                    </Style>
+            </DataGrid.RowStyle><!--Стиль для строк дата грида-->
+                <DataGrid.Columns>
                     <DataGridTextColumn Header="ФИО" Binding="{Binding FullName}" Width="*"/>
                     <DataGridTextColumn Header="Год поступления" Binding="{Binding DatePost}" Width="*"/>
-                </DataGrid.Columns>
-        </DataGrid> 
+                </DataGrid.Columns><!--Колонки дата грида-->
+        </DataGrid> <!--Разметка дата грида-->
         </StackPanel>
     </Grid>
 </Page>

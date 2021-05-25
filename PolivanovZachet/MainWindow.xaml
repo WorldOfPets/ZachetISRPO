@@ -13,7 +13,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="35"/>
             <RowDefinition Height="391*"/>
-        </Grid.RowDefinitions>
+        </Grid.RowDefinitions><!--Разметка страницы-->
         <StackPanel
             Grid.RowSpan="2"
             MouseDown="StackPanel_MouseDown">
@@ -24,7 +24,7 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
 
-        </StackPanel>
+        </StackPanel><!--Стак панель отвечающая за задний фон-->
         <StackPanel
             Grid.Row="0">
             <StackPanel
@@ -39,13 +39,13 @@
                     FontSize="15"
                     Content="X"
                     Width="50"
-                    Height="25"/>
+                    Height="25"/><!--Кнопка закрытия приложения-->
             </StackPanel>
         </StackPanel>
         <Frame
             NavigationUIVisibility="Hidden"
             Grid.Row="1"
             Name="FrmMain" 
-            />
+            /><!--Фрейм для страниц-->
     </Grid>
 </Window>

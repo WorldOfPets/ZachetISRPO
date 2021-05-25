@@ -16,7 +16,7 @@
                Height="500"
                Width="750"
                Margin="0 -35 0 0"
-            Source="/Resource/haker.jpg"/>
+            Source="/Resource/haker.jpg"/><!--Картинка заднего фона-->
         <Border
             Style="{StaticResource stBorder}">
             
@@ -37,7 +37,7 @@
                         Margin="0"
                         Style="{StaticResource tbxlStyle}"
                         Width="100"/>
-                </StackPanel>
+                </StackPanel><!--Логин-->
                 <StackPanel
                     Margin="10"
                     HorizontalAlignment="Right"
@@ -51,7 +51,7 @@
                         Margin="0"
                         Style="{StaticResource tbxlStyle}"
                         Width="100"/>
-                </StackPanel>
+                </StackPanel><!--Пароль-->
                 <StackPanel
                     HorizontalAlignment="Center"
                     Orientation="Horizontal">
@@ -61,13 +61,13 @@
                         Click="btnHack_Click"
                         Style="{StaticResource btnStyle}"
                         Width="70"
-                        Content="Hack"/>
+                        Content="Hack"/><!--Кнопка для входа-->
                     <Button 
                         Name="btnEnter"
                         Click="btnEnter_Click"
                         Style="{StaticResource btnStyle}"
                         Width="70"
-                        Content="Enter"/>
+                        Content="Enter"/><!--Кнопка для взлома-->
                 </StackPanel>
             </StackPanel>
         </Border>

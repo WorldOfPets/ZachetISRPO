@@ -16,12 +16,11 @@
             Content="Назад"
             Name="btnBack"
             Click="btnBack_Click"
-            Width="120"/>
+            Width="120"/><!--Кнопка назад-->
         <Border
             Style="{StaticResource stBorder}">
             
-        <StackPanel
-            
+        <StackPanel 
             Width="380"
             Style="{StaticResource stStyle}">
             <StackPanel
@@ -35,7 +34,7 @@
                     Style="{StaticResource tbxlStyle}"
                     Name="tbFio"
                     Width="190"/>
-            </StackPanel>
+            </StackPanel><!--ФИО-->
             <StackPanel
                 Orientation="Horizontal"
                 HorizontalAlignment="Right">
@@ -48,7 +47,7 @@
                     FontSize="14"
                     Name="cmbSpec"
                     Width="190" Background="{x:Null}" />
-            </StackPanel>
+            </StackPanel><!--Специальность-->
             <StackPanel
                 Orientation="Horizontal"
                 HorizontalAlignment="Right">
@@ -64,7 +63,7 @@
                     Background="#013220"
                     Name="DataPicker"
                     Width="190"/>
-            </StackPanel>
+            </StackPanel><!--Год поступления-->
             <StackPanel
                 Orientation="Horizontal"
                 HorizontalAlignment="Right">
@@ -77,7 +76,7 @@
                     FontSize="14"
                     Name="cmbFormOb"
                     Width="190"/>
-            </StackPanel>
+            </StackPanel><!--Форма обучения-->
             <StackPanel
                 Orientation="Horizontal"
                 HorizontalAlignment="Right">
@@ -90,7 +89,7 @@
                     FontSize="14"
                     Name="cmbGroup"
                     Width="190"/>
-            </StackPanel>
+            </StackPanel><!--Название группы-->
             <Button 
                 Margin="5 5 5 10"
                 Width="200"
@@ -98,7 +97,7 @@
                 Style="{StaticResource btnStyle}"
                 Name="btnAdd"
                 Click="btnAdd_Click"
-                Content="Добавить студента"/>
+                Content="Добавить студента"/><!--Кнопка добавить студента-->
         </StackPanel>
         </Border>
     </Grid>
