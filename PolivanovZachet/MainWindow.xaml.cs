@@ -25,19 +25,43 @@ namespace PolivanovZachet
         {
             InitializeComponent();
 
-            ClassF.PageClass.frm = FrmMain;
-            ClassF.PageClass.frm.Navigate(new EnterPage());
-            ClassF.DBClass.zachetEntities = new DataBaesF.PolivanovZachetEntities();
+            try
+            {
+                ClassF.PageClass.frm = FrmMain;
+                ClassF.PageClass.frm.Navigate(new EnterPage());
+                ClassF.DBClass.zachetEntities = new DataBaesF.PolivanovZachetEntities();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+            }
+            
         }
 
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            try
+            {
+                Application.Current.Shutdown();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+            }
+            
         }
 
         private void StackPanel_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.DragMove();
+            try
+            {
+                this.DragMove();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+            }
+            
         }
     }
 }

@@ -31,51 +31,78 @@ namespace PolivanovZachet.PageF
 
         private async void btnHack_Click(object sender, RoutedEventArgs e)
         {
-            tbPass.Text = "";
-            string test = "";
-            string Login = "Admin";
-            string pass = "k#o@prjL2O&";
-            for (int i = 0; i <= Login.Length - 1; i++)
+            try
             {
-                await Task.Delay(100);
-                tbLogin.Text += Login[i];
+                tbPass.Text = "";
+                tbLogin.Text = "";
+                string test = "";
+                string Login = "Admin";
+                string pass = "k#o@prjL2O&";
+                for (int i = 0; i <= Login.Length - 1; i++)
+                {
+                    await Task.Delay(100);
+                    tbLogin.Text += Login[i];
+                }
+                for (int i = 0; i <= pass.Length - 1; i++)
+                {
+                    await Task.Delay(100);
+                    tbPass.Text += GetRandomChar();
+                    await Task.Delay(100);
+                    tbPass.Text.Remove(tbPass.Text.Length - 1);
+                    await Task.Delay(100);
+                    tbPass.Text += GetRandomChar();
+                    await Task.Delay(100);
+                    tbPass.Text.Remove(tbPass.Text.Length - 1);
+                    await Task.Delay(100);
+                    test += pass[i];
+                    tbPass.Text = test;
+                }
             }
-            for (int i = 0; i <= pass.Length - 1; i++)
+            catch (Exception ex)
             {
-                await Task.Delay(100);
-                tbPass.Text += GetRandomChar();
-                await Task.Delay(100);
-                tbPass.Text.Remove(tbPass.Text.Length - 1);
-                await Task.Delay(100);
-                tbPass.Text += GetRandomChar();
-                await Task.Delay(100);
-                tbPass.Text.Remove(tbPass.Text.Length - 1);
-                await Task.Delay(100);
-                test += pass[i];
-                tbPass.Text = test;
+                MessageBox.Show(ex.Message, "..::Error::..");
             }
+            
         }
         static char GetRandomChar()
         {
-            var index = r.Next(symbols.Length);
-            return symbols[index];
+            try
+            {
+                var index = r.Next(symbols.Length);
+                return symbols[index];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+                var index = r.Next(symbols.Length);
+                return symbols[index];
+            }
+            
         }
 
         private void btnEnter_Click(object sender, RoutedEventArgs e)
         {
-            if (tbLogin.Text != "Admin" || tbPass.Text != "k#o@prjL2O&")
+            try
             {
-                var result = MessageBox.Show("Взломать систему?", "..::Ошибка входа::..", MessageBoxButton.OK);
-                if (result == MessageBoxResult.OK)
+                if (tbLogin.Text != "Admin" || tbPass.Text != "k#o@prjL2O&")
                 {
-                    Img.Visibility = Visibility.Visible;
-                    btnHack.Visibility = Visibility.Visible;
+                    var result = MessageBox.Show("Взломать систему?", "..::Ошибка входа::..", MessageBoxButton.OK);
+                    if (result == MessageBoxResult.OK)
+                    {
+                        Img.Visibility = Visibility.Visible;
+                        btnHack.Visibility = Visibility.Visible;
+                    }
+                }
+                else
+                {
+                    ClassF.PageClass.frm.Navigate(new MainPage());
                 }
             }
-            else 
+            catch (Exception ex)
             {
-                ClassF.PageClass.frm.Navigate(new MainPage());
+                MessageBox.Show(ex.Message, "..::Error::..");
             }
+            
         }
     }
 }

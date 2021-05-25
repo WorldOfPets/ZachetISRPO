@@ -24,34 +24,66 @@ namespace PolivanovZachet.PageF
         public DataStPage()
         {
             InitializeComponent();
-            dataSt.ItemsSource = ClassF.DBClass.zachetEntities.Student.ToList();
+            try
+            {
+                dataSt.ItemsSource = ClassF.DBClass.zachetEntities.Student.ToList();
 
-            cmbSort.SelectedValuePath = "Id";
-            cmbSort.DisplayMemberPath = "Name";
-            cmbSort.ItemsSource = ClassF.DBClass.zachetEntities.Group.ToList();
+                cmbSort.SelectedValuePath = "Id";
+                cmbSort.DisplayMemberPath = "Name";
+                cmbSort.ItemsSource = ClassF.DBClass.zachetEntities.Group.ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+            }
+            
         }
 
         private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var row = (DataGridRow)sender;
-            var context = row.DataContext as DataBaesF.Student;
-            if (context == null) return;
-            idData = context.Id;
+            try
+            {
+                var row = (DataGridRow)sender;
+                var context = row.DataContext as DataBaesF.Student;
+                if (context == null) return;
+                idData = context.Id;
 
-            ClassF.PageClass.frm.Navigate(new DataOcPage());
+                ClassF.PageClass.frm.Navigate(new DataOcPage());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+            }
+            
         }
 
         private void btnSort_Click(object sender, RoutedEventArgs e)
         {
-            if (cmbSort.Text != null)
+            try
             {
-                dataSt.ItemsSource = ClassF.DBClass.zachetEntities.Student.Where(x => x.IdGroup == (int)cmbSort.SelectedValue).ToList();
+                if (cmbSort.Text != null)
+                {
+                    dataSt.ItemsSource = ClassF.DBClass.zachetEntities.Student.Where(x => x.IdGroup == (int)cmbSort.SelectedValue).ToList();
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+            }
+            
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            ClassF.PageClass.frm.GoBack();
+            try
+            {
+                ClassF.PageClass.frm.GoBack();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+            }
+            
         }
     }
 }

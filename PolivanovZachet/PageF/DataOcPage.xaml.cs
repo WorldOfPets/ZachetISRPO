@@ -24,12 +24,28 @@ namespace PolivanovZachet.PageF
         {
             InitializeComponent();
 
-            dataOc.ItemsSource = ClassF.DBClass.zachetEntities.Ocenka.Where(x => x.IdStudent == DataStPage.idData).ToList();
+            try
+            {
+                dataOc.ItemsSource = ClassF.DBClass.zachetEntities.Ocenka.Where(x => x.IdStudent == DataStPage.idData).ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+            }
+            
         }
 
         private void btnSort_Click(object sender, RoutedEventArgs e)
         {
-            ClassF.PageClass.frm.GoBack();
+            try
+            {
+                ClassF.PageClass.frm.GoBack();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+            }
+            
         }
     }
 }

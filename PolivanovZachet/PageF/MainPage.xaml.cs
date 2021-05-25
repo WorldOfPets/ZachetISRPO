@@ -27,17 +27,41 @@ namespace PolivanovZachet.PageF
 
         private void btnAddSt_Click(object sender, RoutedEventArgs e)
         {
-            ClassF.PageClass.frm.Navigate(new AddStudent());
+            try
+            {
+                ClassF.PageClass.frm.Navigate(new AddStudent());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+            }
+            
         }
 
         private void btnAddOcenka_Click(object sender, RoutedEventArgs e)
         {
-            ClassF.PageClass.frm.Navigate(new AddOcenka());
+            try
+            {
+                ClassF.PageClass.frm.Navigate(new AddOcenka());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+            }
+            
         }
 
         private void btnSee_Click(object sender, RoutedEventArgs e)
         {
-            ClassF.PageClass.frm.Navigate(new DataStPage());
+            try
+            {
+                ClassF.PageClass.frm.Navigate(new DataStPage());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+            }
+            
         }
     }
 }

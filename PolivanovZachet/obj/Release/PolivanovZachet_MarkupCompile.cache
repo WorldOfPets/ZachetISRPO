@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\Admin\Source\Repos\WorldOfPets\ZachetISRPO\PolivanovZachet\obj\Debug\
+C:\Users\Admin\Source\Repos\WorldOfPets\ZachetISRPO\PolivanovZachet\obj\Release\
 PolivanovZachet
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Admin\Source\Repos\WorldOfPets\ZachetISRPO\PolivanovZachet\App.xaml
 7-763081097
 2461602057
@@ -16,5 +16,5 @@ C:\Users\Admin\Source\Repos\WorldOfPets\ZachetISRPO\PolivanovZachet\App.xaml
 18-1329855512
 MainWindow.xaml;PageF\AddOcenka.xaml;PageF\AddStudent.xaml;PageF\DataOcPage.xaml;PageF\DataStPage.xaml;PageF\EnterPage.xaml;PageF\MainPage.xaml;
 
-False
+True
 

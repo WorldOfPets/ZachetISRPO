@@ -25,40 +25,64 @@ namespace PolivanovZachet.PageF
         {
             InitializeComponent();
 
-            cmbSpec.SelectedValuePath = "Id";
-            cmbSpec.DisplayMemberPath = "Name";
-            cmbSpec.ItemsSource = ClassF.DBClass.zachetEntities.Spec.ToList();
+            try
+            {
+                cmbSpec.SelectedValuePath = "Id";
+                cmbSpec.DisplayMemberPath = "Name";
+                cmbSpec.ItemsSource = ClassF.DBClass.zachetEntities.Spec.ToList();
 
-            cmbGroup.SelectedValuePath = "Id";
-            cmbGroup.DisplayMemberPath = "Name";
-            cmbGroup.ItemsSource = ClassF.DBClass.zachetEntities.Group.ToList();
+                cmbGroup.SelectedValuePath = "Id";
+                cmbGroup.DisplayMemberPath = "Name";
+                cmbGroup.ItemsSource = ClassF.DBClass.zachetEntities.Group.ToList();
 
-            cmbFormOb.Items.Add("Очная");
-            cmbFormOb.Items.Add("Заочная");
+                cmbFormOb.Items.Add("Очная");
+                cmbFormOb.Items.Add("Заочная");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+            }
+            
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            if (tbFio.Text != null && DataPicker.SelectedDate != null && cmbSpec.Text != null && cmbGroup.Text != null && cmbFormOb.Text != null)
+            try
             {
-
-                DataBaesF.Student student = new DataBaesF.Student()
+                if (tbFio.Text != null && DataPicker.SelectedDate != null && cmbSpec.Text != null && cmbGroup.Text != null && cmbFormOb.Text != null)
                 {
-                    FullName = tbFio.Text,
-                    DatePost = DataPicker.SelectedDate,
-                    IdSpec = (int)cmbSpec.SelectedValue,
-                    IdGroup = (int)cmbGroup.SelectedValue,
-                    FormaOb = cmbFormOb.Text
-                };
-                ClassF.DBClass.zachetEntities.Student.Add(student);
-                ClassF.DBClass.zachetEntities.SaveChanges();
-                MessageBox.Show("Студент успешно добавлен");
+
+                    DataBaesF.Student student = new DataBaesF.Student()
+                    {
+                        FullName = tbFio.Text,
+                        DatePost = DataPicker.SelectedDate,
+                        IdSpec = (int)cmbSpec.SelectedValue,
+                        IdGroup = (int)cmbGroup.SelectedValue,
+                        FormaOb = cmbFormOb.Text
+                    };
+                    ClassF.DBClass.zachetEntities.Student.Add(student);
+                    ClassF.DBClass.zachetEntities.SaveChanges();
+                    MessageBox.Show("Студент успешно добавлен");
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+            }
+            
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            ClassF.PageClass.frm.GoBack();
+            try
+            {
+                ClassF.PageClass.frm.GoBack();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "..::Error::..");
+            }
+            
         }
     }
 }
