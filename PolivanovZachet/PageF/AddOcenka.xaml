@@ -23,8 +23,8 @@
         <StackPanel
             Width="300"
             Style="{StaticResource stStyle}">
-            
-            <StackPanel
+                <!--ГруппаНАЧАЛО-->
+                    <StackPanel
                 
                 Orientation="Horizontal"
                 HorizontalAlignment="Right">
@@ -38,8 +38,11 @@
                     DropDownClosed="cmbGroup_DropDownClosed"
                     Name="cmbGroup"
                     Width="150"/>
-            </StackPanel><!--Группа-->
-            <StackPanel
+            </StackPanel>
+                <!--ГруппаКОНЕЦ-->
+            
+                <!--Cтудент-->
+                <StackPanel
                 Orientation="Horizontal"
                 HorizontalAlignment="Right">
                 <TextBlock 
@@ -51,7 +54,7 @@
                     FontSize="14"
                     Name="cmbStudent"
                     Width="150"/>
-            </StackPanel><!--Cтудент-->
+            </StackPanel>
             <StackPanel
                 Orientation="Horizontal"
                 HorizontalAlignment="Right">

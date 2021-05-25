@@ -57,7 +57,11 @@ namespace PolivanovZachet.PageF
             }
             
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSort_Click(object sender, RoutedEventArgs e)//Сортировака данных в дата грид
         {
             try

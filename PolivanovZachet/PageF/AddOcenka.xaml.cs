@@ -42,22 +42,29 @@ namespace PolivanovZachet.PageF
             
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAddO_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                if (cmbGroup.Text != null && cmbStudent.Text != null && cmbDescip.Text != null && tbOcenka.Text != null)//Проверка на нулевые значения текстбоксов
+                if (cmbGroup.Text != "" && cmbStudent.Text != "" && cmbDescip.Text != "" && tbOcenka.Text != "")//Проверка на нулевые значения текстбоксов
                 {
-
-                    DataBaesF.Ocenka ocenka = new DataBaesF.Ocenka()//Создание экземпляра таблицы БД для добовления данных
+                    if (Convert.ToInt32(tbOcenka.Text) <= 5 && Convert.ToInt32(tbOcenka.Text) >= 2) 
                     {
-                        IdDesciplina = (int)cmbDescip.SelectedValue,//Добавление данных
-                        IdStudent = (int)cmbStudent.SelectedValue,
-                        Ocen = Convert.ToInt32(tbOcenka.Text)
-                    };
-                    ClassF.DBClass.zachetEntities.Ocenka.Add(ocenka);//Добавление данных в БД
-                    ClassF.DBClass.zachetEntities.SaveChanges();//Сохранение данных в БД
-                    MessageBox.Show("Оценка успешно добавлена");
+                        DataBaesF.Ocenka ocenka = new DataBaesF.Ocenka()//Создание экземпляра таблицы БД для добовления данных
+                        {
+                            IdDesciplina = (int)cmbDescip.SelectedValue,//Добавление данных
+                            IdStudent = (int)cmbStudent.SelectedValue,
+                            Ocen = Convert.ToInt32(tbOcenka.Text)
+                        };
+                        ClassF.DBClass.zachetEntities.Ocenka.Add(ocenka);//Добавление данных в БД
+                        ClassF.DBClass.zachetEntities.SaveChanges();//Сохранение данных в БД
+                        MessageBox.Show("Оценка успешно добавлена");
+                    }
                 }
             }
             catch (Exception ex)

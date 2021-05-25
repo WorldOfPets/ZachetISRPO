@@ -50,7 +50,7 @@ namespace PolivanovZachet.PageF
         {
             try
             {
-                if (tbFio.Text != null && DataPicker.SelectedDate != null && cmbSpec.Text != null && cmbGroup.Text != null && cmbFormOb.Text != null)//Проверка на нулевые значения текстбоксов
+                if (tbFio.Text != "" && DataPicker.SelectedDate != null && cmbSpec.Text != "" && cmbGroup.Text != "" && cmbFormOb.Text != "")//Проверка на нулевые значения текстбоксов
                 {
 
                     DataBaesF.Student student = new DataBaesF.Student()//Создание экземпляра таблицы БД для добовления данных
