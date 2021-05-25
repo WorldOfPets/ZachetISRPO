@@ -43,7 +43,7 @@ namespace PolivanovZachet.PageF
         }
 
         /// <summary>
-        /// 
+        /// Кнопка добавления оценки
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -73,7 +73,11 @@ namespace PolivanovZachet.PageF
             }
             
         }
-
+        /// <summary>
+        /// Метод при закрытии комбобокса
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbGroup_DropDownClosed(object sender, EventArgs e)
         {
             try

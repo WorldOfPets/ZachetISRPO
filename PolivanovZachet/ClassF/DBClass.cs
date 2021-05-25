@@ -9,6 +9,9 @@ namespace PolivanovZachet.ClassF
 {
     class DBClass
     {
+        /// <summary>
+        /// База данных (класс для хранения)
+        /// </summary>
         public static PolivanovZachetEntities zachetEntities;//Класс для хранения БД
     }
 }
