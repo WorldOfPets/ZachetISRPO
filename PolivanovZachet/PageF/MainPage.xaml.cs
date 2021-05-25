@@ -29,7 +29,7 @@ namespace PolivanovZachet.PageF
         {
             try
             {
-                ClassF.PageClass.frm.Navigate(new AddStudent());
+                ClassF.PageClass.frm.Navigate(new AddStudent());//Переход на страницу
             }
             catch (Exception ex)
             {
@@ -42,7 +42,7 @@ namespace PolivanovZachet.PageF
         {
             try
             {
-                ClassF.PageClass.frm.Navigate(new AddOcenka());
+                ClassF.PageClass.frm.Navigate(new AddOcenka());//Переход на страницу
             }
             catch (Exception ex)
             {
@@ -55,7 +55,7 @@ namespace PolivanovZachet.PageF
         {
             try
             {
-                ClassF.PageClass.frm.Navigate(new DataStPage());
+                ClassF.PageClass.frm.Navigate(new DataStPage());//Переход на страницу
             }
             catch (Exception ex)
             {

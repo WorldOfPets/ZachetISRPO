@@ -11,23 +11,17 @@
     <Grid>
         <Image 
             Name="Img"
-            Visibility="Visible"
+            Visibility="Collapsed"
             Grid.RowSpan="2"
                Height="500"
                Width="750"
                Margin="0 -35 0 0"
             Source="/Resource/haker.jpg"/>
         <Border
-            BorderBrush="#FF059905"
-            BorderThickness="5"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Padding="5">
+            Style="{StaticResource stBorder}">
             
         <StackPanel
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Background="#FF059905"
+            Style="{StaticResource stStyle}"
             Height="150"
             Width="200">
                 <StackPanel
@@ -40,11 +34,8 @@
                         Style="{StaticResource tblStyle}"/>
                     <TextBox 
                         Name="tbLogin"
-                        FontSize="16"
-                        FontFamily="Calibri"
-                        Foreground="#FF059905"
-                        BorderBrush="Transparent"
-                        Background="#013220"
+                        Margin="0"
+                        Style="{StaticResource tbxlStyle}"
                         Width="100"/>
                 </StackPanel>
                 <StackPanel
@@ -57,11 +48,8 @@
                         Text="Password: "/>
                     <TextBox 
                         Name="tbPass"
-                        FontSize="16"
-                        FontFamily="Calibri"
-                        Foreground="#FF059905"
-                        BorderBrush="Transparent"
-                        Background="#013220"
+                        Margin="0"
+                        Style="{StaticResource tbxlStyle}"
                         Width="100"/>
                 </StackPanel>
                 <StackPanel

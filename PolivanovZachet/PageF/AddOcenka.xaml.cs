@@ -26,10 +26,11 @@ namespace PolivanovZachet.PageF
 
             try
             {
+                //Загрузка данных из БД в комбобокс
                 cmbGroup.SelectedValuePath = "Id";
                 cmbGroup.DisplayMemberPath = "Name";
                 cmbGroup.ItemsSource = ClassF.DBClass.zachetEntities.Group.ToList();
-
+                //Загрузка данных из БД в комбобокс
                 cmbDescip.SelectedValuePath = "Id";
                 cmbDescip.DisplayMemberPath = "Name";
                 cmbDescip.ItemsSource = ClassF.DBClass.zachetEntities.Desciplina.ToList();
@@ -45,17 +46,17 @@ namespace PolivanovZachet.PageF
         {
             try
             {
-                if (cmbGroup.Text != null && cmbStudent.Text != null && cmbDescip.Text != null && tbOcenka.Text != null)
+                if (cmbGroup.Text != null && cmbStudent.Text != null && cmbDescip.Text != null && tbOcenka.Text != null)//Проверка на нулевые значения текстбоксов
                 {
 
-                    DataBaesF.Ocenka ocenka = new DataBaesF.Ocenka()
+                    DataBaesF.Ocenka ocenka = new DataBaesF.Ocenka()//Создание экземпляра таблицы БД для добовления данных
                     {
-                        IdDesciplina = (int)cmbDescip.SelectedValue,
+                        IdDesciplina = (int)cmbDescip.SelectedValue,//Добавление данных
                         IdStudent = (int)cmbStudent.SelectedValue,
                         Ocen = Convert.ToInt32(tbOcenka.Text)
                     };
-                    ClassF.DBClass.zachetEntities.Ocenka.Add(ocenka);
-                    ClassF.DBClass.zachetEntities.SaveChanges();
+                    ClassF.DBClass.zachetEntities.Ocenka.Add(ocenka);//Добавление данных в БД
+                    ClassF.DBClass.zachetEntities.SaveChanges();//Сохранение данных в БД
                     MessageBox.Show("Оценка успешно добавлена");
                 }
             }
@@ -70,6 +71,7 @@ namespace PolivanovZachet.PageF
         {
             try
             {
+                //Загрузка данных из БД в комбобокс при выборе группы
                 cmbStudent.SelectedValuePath = "Id";
                 cmbStudent.DisplayMemberPath = "FullName";
                 cmbStudent.ItemsSource = ClassF.DBClass.zachetEntities.Student.Where(x => x.IdGroup == (int)cmbGroup.SelectedValue).ToList();
@@ -85,7 +87,7 @@ namespace PolivanovZachet.PageF
         {
             try
             {
-                ClassF.PageClass.frm.GoBack();
+                ClassF.PageClass.frm.GoBack();//Переход назад
             }
             catch (Exception ex)
             {

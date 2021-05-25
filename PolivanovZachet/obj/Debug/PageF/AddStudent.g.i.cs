@@ -49,7 +49,7 @@ namespace PolivanovZachet.PageF {
         #line hidden
         
         
-        #line 47 "..\..\..\PageF\AddStudent.xaml"
+        #line 38 "..\..\..\PageF\AddStudent.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox tbFio;
         
@@ -57,7 +57,7 @@ namespace PolivanovZachet.PageF {
         #line hidden
         
         
-        #line 60 "..\..\..\PageF\AddStudent.xaml"
+        #line 51 "..\..\..\PageF\AddStudent.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox cmbSpec;
         
@@ -65,7 +65,7 @@ namespace PolivanovZachet.PageF {
         #line hidden
         
         
-        #line 76 "..\..\..\PageF\AddStudent.xaml"
+        #line 67 "..\..\..\PageF\AddStudent.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DatePicker DataPicker;
         
@@ -73,7 +73,7 @@ namespace PolivanovZachet.PageF {
         #line hidden
         
         
-        #line 89 "..\..\..\PageF\AddStudent.xaml"
+        #line 80 "..\..\..\PageF\AddStudent.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox cmbFormOb;
         
@@ -81,7 +81,7 @@ namespace PolivanovZachet.PageF {
         #line hidden
         
         
-        #line 102 "..\..\..\PageF\AddStudent.xaml"
+        #line 93 "..\..\..\PageF\AddStudent.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox cmbGroup;
         
@@ -89,7 +89,7 @@ namespace PolivanovZachet.PageF {
         #line hidden
         
         
-        #line 110 "..\..\..\PageF\AddStudent.xaml"
+        #line 101 "..\..\..\PageF\AddStudent.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAdd;
         
@@ -153,7 +153,7 @@ namespace PolivanovZachet.PageF {
             case 7:
             this.btnAdd = ((System.Windows.Controls.Button)(target));
             
-            #line 111 "..\..\..\PageF\AddStudent.xaml"
+            #line 102 "..\..\..\PageF\AddStudent.xaml"
             this.btnAdd.Click += new System.Windows.RoutedEventHandler(this.btnAdd_Click);
             
             #line default

@@ -41,7 +41,7 @@ namespace PolivanovZachet.PageF {
     public partial class MainPage : System.Windows.Controls.Page, System.Windows.Markup.IComponentConnector {
         
         
-        #line 29 "..\..\..\PageF\MainPage.xaml"
+        #line 23 "..\..\..\PageF\MainPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAddSt;
         
@@ -49,7 +49,7 @@ namespace PolivanovZachet.PageF {
         #line hidden
         
         
-        #line 36 "..\..\..\PageF\MainPage.xaml"
+        #line 30 "..\..\..\PageF\MainPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAddOcenka;
         
@@ -57,7 +57,7 @@ namespace PolivanovZachet.PageF {
         #line hidden
         
         
-        #line 44 "..\..\..\PageF\MainPage.xaml"
+        #line 38 "..\..\..\PageF\MainPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnSee;
         
@@ -97,7 +97,7 @@ namespace PolivanovZachet.PageF {
             case 1:
             this.btnAddSt = ((System.Windows.Controls.Button)(target));
             
-            #line 30 "..\..\..\PageF\MainPage.xaml"
+            #line 24 "..\..\..\PageF\MainPage.xaml"
             this.btnAddSt.Click += new System.Windows.RoutedEventHandler(this.btnAddSt_Click);
             
             #line default
@@ -106,7 +106,7 @@ namespace PolivanovZachet.PageF {
             case 2:
             this.btnAddOcenka = ((System.Windows.Controls.Button)(target));
             
-            #line 37 "..\..\..\PageF\MainPage.xaml"
+            #line 31 "..\..\..\PageF\MainPage.xaml"
             this.btnAddOcenka.Click += new System.Windows.RoutedEventHandler(this.btnAddOcenka_Click);
             
             #line default
@@ -115,7 +115,7 @@ namespace PolivanovZachet.PageF {
             case 3:
             this.btnSee = ((System.Windows.Controls.Button)(target));
             
-            #line 45 "..\..\..\PageF\MainPage.xaml"
+            #line 39 "..\..\..\PageF\MainPage.xaml"
             this.btnSee.Click += new System.Windows.RoutedEventHandler(this.btnSee_Click);
             
             #line default

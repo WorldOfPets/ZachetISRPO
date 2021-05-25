@@ -21,9 +21,9 @@ namespace PolivanovZachet.PageF
     /// </summary>
     public partial class EnterPage : Page
     {
-        static string symbols = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1023456789+-.,/?><{}[]()_&#@!$%^*";
+        static string symbols = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1023456789+-.,/?><{}[]()_&#@!$%^*";//Переменная для генирации рандомных символов
 
-        static Random r = new Random();
+        static Random r = new Random();//Рандомайзер
         public EnterPage()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace PolivanovZachet.PageF
         {
             try
             {
-                tbPass.Text = "";
+                tbPass.Text = "";//Алгоритм который имметирует подбор пароля
                 tbLogin.Text = "";
                 string test = "";
                 string Login = "Admin";
@@ -68,7 +68,7 @@ namespace PolivanovZachet.PageF
         {
             try
             {
-                var index = r.Next(symbols.Length);
+                var index = r.Next(symbols.Length);//Возвращеает рандомный символ
                 return symbols[index];
             }
             catch (Exception ex)
@@ -84,12 +84,12 @@ namespace PolivanovZachet.PageF
         {
             try
             {
-                if (tbLogin.Text != "Admin" || tbPass.Text != "k#o@prjL2O&")
+                if (tbLogin.Text != "Admin" || tbPass.Text != "k#o@prjL2O&")//Проверка логина и пароля
                 {
                     var result = MessageBox.Show("Взломать систему?", "..::Ошибка входа::..", MessageBoxButton.OK);
                     if (result == MessageBoxResult.OK)
                     {
-                        Img.Visibility = Visibility.Visible;
+                        Img.Visibility = Visibility.Visible;//Отображение скрытых элементов
                         btnHack.Visibility = Visibility.Visible;
                     }
                 }

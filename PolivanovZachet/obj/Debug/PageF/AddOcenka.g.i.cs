@@ -73,7 +73,7 @@ namespace PolivanovZachet.PageF {
         #line hidden
         
         
-        #line 87 "..\..\..\PageF\AddOcenka.xaml"
+        #line 82 "..\..\..\PageF\AddOcenka.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox tbOcenka;
         
@@ -81,7 +81,7 @@ namespace PolivanovZachet.PageF {
         #line hidden
         
         
-        #line 94 "..\..\..\PageF\AddOcenka.xaml"
+        #line 89 "..\..\..\PageF\AddOcenka.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAddO;
         
@@ -148,7 +148,7 @@ namespace PolivanovZachet.PageF {
             case 6:
             this.btnAddO = ((System.Windows.Controls.Button)(target));
             
-            #line 95 "..\..\..\PageF\AddOcenka.xaml"
+            #line 90 "..\..\..\PageF\AddOcenka.xaml"
             this.btnAddO.Click += new System.Windows.RoutedEventHandler(this.btnAddO_Click);
             
             #line default

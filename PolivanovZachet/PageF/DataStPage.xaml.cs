@@ -26,8 +26,9 @@ namespace PolivanovZachet.PageF
             InitializeComponent();
             try
             {
+                //Загрузка данных в датагрид из БД
                 dataSt.ItemsSource = ClassF.DBClass.zachetEntities.Student.ToList();
-
+                //Загрузка данных из БД в комбобокс
                 cmbSort.SelectedValuePath = "Id";
                 cmbSort.DisplayMemberPath = "Name";
                 cmbSort.ItemsSource = ClassF.DBClass.zachetEntities.Group.ToList();
@@ -39,7 +40,7 @@ namespace PolivanovZachet.PageF
             
         }
 
-        private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)//Переход на страницу оценок по двойному клику
         {
             try
             {
@@ -57,7 +58,7 @@ namespace PolivanovZachet.PageF
             
         }
 
-        private void btnSort_Click(object sender, RoutedEventArgs e)
+        private void btnSort_Click(object sender, RoutedEventArgs e)//Сортировака данных в дата грид
         {
             try
             {
@@ -77,7 +78,7 @@ namespace PolivanovZachet.PageF
         {
             try
             {
-                ClassF.PageClass.frm.GoBack();
+                ClassF.PageClass.frm.GoBack();//Переход назад
             }
             catch (Exception ex)
             {

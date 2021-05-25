@@ -27,14 +27,15 @@ namespace PolivanovZachet.PageF
 
             try
             {
+                //Загрузка данных из БД в комбобокс
                 cmbSpec.SelectedValuePath = "Id";
                 cmbSpec.DisplayMemberPath = "Name";
                 cmbSpec.ItemsSource = ClassF.DBClass.zachetEntities.Spec.ToList();
-
+                //Загрузка данных из БД в комбобокс
                 cmbGroup.SelectedValuePath = "Id";
                 cmbGroup.DisplayMemberPath = "Name";
                 cmbGroup.ItemsSource = ClassF.DBClass.zachetEntities.Group.ToList();
-
+                //Добавление данных в комбобокс
                 cmbFormOb.Items.Add("Очная");
                 cmbFormOb.Items.Add("Заочная");
             }
@@ -49,19 +50,19 @@ namespace PolivanovZachet.PageF
         {
             try
             {
-                if (tbFio.Text != null && DataPicker.SelectedDate != null && cmbSpec.Text != null && cmbGroup.Text != null && cmbFormOb.Text != null)
+                if (tbFio.Text != null && DataPicker.SelectedDate != null && cmbSpec.Text != null && cmbGroup.Text != null && cmbFormOb.Text != null)//Проверка на нулевые значения текстбоксов
                 {
 
-                    DataBaesF.Student student = new DataBaesF.Student()
+                    DataBaesF.Student student = new DataBaesF.Student()//Создание экземпляра таблицы БД для добовления данных
                     {
-                        FullName = tbFio.Text,
+                        FullName = tbFio.Text,//Добавление данных
                         DatePost = DataPicker.SelectedDate,
                         IdSpec = (int)cmbSpec.SelectedValue,
                         IdGroup = (int)cmbGroup.SelectedValue,
                         FormaOb = cmbFormOb.Text
                     };
-                    ClassF.DBClass.zachetEntities.Student.Add(student);
-                    ClassF.DBClass.zachetEntities.SaveChanges();
+                    ClassF.DBClass.zachetEntities.Student.Add(student);//Добавление данных в БД
+                    ClassF.DBClass.zachetEntities.SaveChanges();//Сохранение данных в БД
                     MessageBox.Show("Студент успешно добавлен");
                 }
             }
@@ -76,7 +77,7 @@ namespace PolivanovZachet.PageF
         {
             try
             {
-                ClassF.PageClass.frm.GoBack();
+                ClassF.PageClass.frm.GoBack();//Переход назад
             }
             catch (Exception ex)
             {

@@ -26,7 +26,7 @@ namespace PolivanovZachet.PageF
 
             try
             {
-                dataOc.ItemsSource = ClassF.DBClass.zachetEntities.Ocenka.Where(x => x.IdStudent == DataStPage.idData).ToList();
+                dataOc.ItemsSource = ClassF.DBClass.zachetEntities.Ocenka.Where(x => x.IdStudent == DataStPage.idData).ToList();//Загрузка данных в дата грид из БД
             }
             catch (Exception ex)
             {
@@ -39,7 +39,7 @@ namespace PolivanovZachet.PageF
         {
             try
             {
-                ClassF.PageClass.frm.GoBack();
+                ClassF.PageClass.frm.GoBack();//Переход назад
             }
             catch (Exception ex)
             {

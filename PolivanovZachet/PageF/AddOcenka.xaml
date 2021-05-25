@@ -18,17 +18,11 @@
             Click="btnBack_Click"
             Width="120"/>
         <Border
-            BorderBrush="#FF059905"
-            BorderThickness="5"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Padding="5">
+            Style="{StaticResource stBorder}">
             
         <StackPanel
             Width="300"
-            Background="#FF059905"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center">
+            Style="{StaticResource stStyle}">
             
             <StackPanel
                 
@@ -78,12 +72,7 @@
                     Style="{StaticResource tblStyle}"
                     Text="Оценка: "/>
                 <TextBox 
-                    FontSize="16"
-                    Margin="5"
-                        FontFamily="Calibri"
-                        Foreground="#FF059905"
-                        BorderBrush="Transparent"
-                        Background="#013220"
+                    Style="{StaticResource tbxlStyle}"
                     Name="tbOcenka"
                     Width="150"/>
             </StackPanel>

@@ -10,17 +10,11 @@
 
     <Grid>
         <Border
-            BorderBrush="#FF059905"
-            BorderThickness="5"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Padding="5">
+            Style="{StaticResource stBorder}">
             
         <StackPanel
             Width="250"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Background="#FF059905">
+            Style="{StaticResource stStyle}">
             <Button 
                 Width="200"
                 Height="35"
